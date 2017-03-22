@@ -1,0 +1,23 @@
+{
+  "name": "comments-feed",
+  "version": "1.0.0",
+  "description": "Comments field example",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kfirstri/comments-feed.git"
+  },
+  "author": "kfir stri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kfirstri/comments-feed/issues"
+  },
+  "homepage": "https://github.com/kfirstri/comments-feed#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25"
+  }
+}
