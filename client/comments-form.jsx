@@ -25,8 +25,8 @@ class CommentsForm extends Component {
 
   render() {
     return (
-      <div className="comments-form" onSubmit={ this.addComment }>
-        <form>
+      <div className="comments-form">
+        <form onSubmit={ this.addComment }>
           <input type="text" 
                  className="field email" 
                  name="email" 
