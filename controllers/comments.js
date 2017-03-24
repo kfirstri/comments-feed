@@ -1,4 +1,4 @@
-const db = require('../database.js');
+const db = require('../resources/database.js');
 
 var getAllComments = (req, res) => {
   db.get().collection('comments').find().toArray().then(results => {
