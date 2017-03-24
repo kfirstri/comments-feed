@@ -1,9 +1,39 @@
-import React from 'react';
-import {render} from 'react-dom';
+import React, { Component } from 'react'
+import {render} from 'react-dom'
 
-class App extends React.Component {
+import CommentsForm from './comments-form.jsx'
+// import CommentsList from './comments-list.jsx'
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.addComment = this.addComment.bind(this);
+
+    this.loadComments();
+
+    this.state = {
+      comments: [],
+      loadingComments: true
+    };
+  }
+
+  addComment(email, text) {
+    // do stuff
+  }
+
+  loadComments() {
+    // load comments
+  }
+
   render () {
-    return <p> Hello React! </p>;
+    return (
+      <div className="comments-container">
+        <CommentsForm addComment={ this.addComment } />
+        {/*<CommentsList comments={ this.state.comments } 
+                      loadingComments={ this.state.loadingComments }/>*/}
+      </div>
+    );
   }
 }
 
