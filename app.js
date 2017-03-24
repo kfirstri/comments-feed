@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 // create comment HTTP endpoints
 app.get('/comments', commentsController.getAllComments);
-app.post('/comment', commentsController.saveNewComment);
+app.post('/comments', commentsController.saveNewComment);
 
 // start server
 app.listen(1337, () => {
