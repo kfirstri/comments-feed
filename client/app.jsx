@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {render} from 'react-dom'
+import Request from 'browser-request'
 
 import CommentsForm from './comments-form.jsx'
 import CommentsList from './comments-list.jsx'
@@ -19,8 +20,10 @@ class App extends Component {
     };
   }
 
+  /**
+   * Add the comment to the DB and the current app state
+   */
   addComment(email, text) {
-    // add the new comment
     var newCommentsList = this.state.comments;
     newCommentsList.push({ email, text });
 
@@ -29,14 +32,19 @@ class App extends Component {
     });
   }
 
+  /**
+   * Load the comments from the db into the state
+   */
   loadComments() {
-    // load comments
-    setTimeout(function(w) {
-      w.setState({
-        comments: [],
+    Request('/comments', (err, res, body) => {
+      if (err) return console.log('Couldnt get comments - err');
+
+      var commentsData = JSON.parse(body);
+      this.setState({
+        comments: commentsData,
         loadingComments: false
       });
-    }, 3000, this);
+    });
   }
 
   render () {
