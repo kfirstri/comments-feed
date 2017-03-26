@@ -1,0 +1,47 @@
+div#app {
+  margin: 0 auto;
+  width: 30%;
+  border: 1px solid lightgray;
+}
+
+div.comments-form {
+  background-color: lightgray;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+  div.comments-form input {
+    display: block;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+    div.comments-form input.textField {
+      height: 70px;
+    }
+
+div.comments-list {
+  padding: 10px;
+}
+  div.comments-list input {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  div.comments-list div.comment {
+    border: 1px solid black;
+  }
+
+    div.comments-list div.comment span {
+      display: inline;
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    div.comments-list div.comment img {
+      display: inline;
+      border-radius: 5px;
+    }

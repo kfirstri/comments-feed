@@ -24,8 +24,21 @@ class App extends Component {
    * Add the comment to the DB and the current app state
    */
   addComment(email, text) {
+    var newComment = {email, text};
     var newCommentsList = this.state.comments;
-    newCommentsList.push({ email, text });
+    newCommentsList.push(newComment);
+
+    var dataToSend = {
+      method: 'POST',
+      url: '/comments',
+      body: JSON.stringify(newComment),
+      json: true
+    };
+
+    Request(dataToSend, (err, res) => {
+      if (err) return console.log(err);
+      console.log('saved comment');
+    });
 
     this.setState({
       comments: newCommentsList

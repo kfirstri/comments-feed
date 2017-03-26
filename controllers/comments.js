@@ -10,18 +10,20 @@ var getAllComments = (req, res) => {
 }
 
 var saveNewComment = (req, res) => {
-  console.log('save new comment');
+  if (!req.body.email || !req.body.text) {
+    return res.send('you must send email and a message.');
+  }
 
   var comment = {
-    'email' : 'k@k.com',
-    'text' : 'hello world'
+    'email' : req.body.email,
+    'text' : req.body.text
   };
 
   db.get().collection('comments').insertOne(comment).then(result => {
-    return res.send('saved comment'); 
+    return res.json({'result': 'saved comments'}); 
   })
   .catch(err => {
-    return res.send('err - ' + err);
+    return res.json({'error': err});
   });
 }
 

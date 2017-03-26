@@ -28,18 +28,18 @@ class CommentsForm extends Component {
       <div className="comments-form">
         <form onSubmit={ this.addComment }>
           <input type="text" 
-                 className="field email" 
+                 className="email" 
                  name="email" 
                  value={ this.state.email } 
                  placeholder="Email:"
                  onChange={ this.handleFormData } />
           <input type="text" 
-                 className="field text" 
+                 className="textField" 
                  name="text" 
                  value={ this.state.text }
                  placeholder="Enter a Message:"
                  onChange={ this.handleFormData } />
-          <input type="submit" className="field submit" value="SUBMIT"/>
+          <input type="submit" className="submit" value="SUBMIT"/>
         </form>
       </div>
     )
