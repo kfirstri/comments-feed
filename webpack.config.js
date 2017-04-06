@@ -1,7 +1,8 @@
 const path = require('path');
+const context = __dirname;
 
 module.exports = {
-  context: __dirname,
+  context,
   entry: './client/app.jsx',
   output: {
     filename: 'bundle.js',
@@ -12,7 +13,7 @@ module.exports = {
       {
         test : /\.(js|jsx)?/,
         include : path.resolve(__dirname, 'client'),
-        loader : 'babel-loader'
+        loader : 'babel-loader',
       }
     ]
   },

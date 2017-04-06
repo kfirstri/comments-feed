@@ -1,7 +1,8 @@
 div#app {
   margin: 0 auto;
-  width: 30%;
+  width: 25%;
   border: 1px solid lightgray;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 div.comments-form {
@@ -28,20 +29,22 @@ div.comments-list {
   div.comments-list input {
     height: 30px;
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
-  div.comments-list div.comment {
-    border: 1px solid black;
+div.comment {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+  div.comment div.image img {
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
   }
 
-    div.comments-list div.comment span {
-      display: inline;
-      width: 100%;
-      border: 1px solid black;
-    }
-
-    div.comments-list div.comment img {
-      display: inline;
-      border-radius: 5px;
-    }
+  div.comment div.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }

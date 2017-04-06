@@ -8,9 +8,13 @@ class Comment extends Component {
 
     return (
       <div className="comment">
-        <img src={ gravatarURL } />
-        <span className="comment-email">{ comment.email }</span>
-        <span className="comment-text">{ comment.text }</span>
+        <div className="image">
+          <img src={ gravatarURL } />
+        </div>
+        <div className="content">
+          <span className="comment-email">{ comment.email }</span>
+          <span className="comment-text">{ comment.text }</span>
+        </div>
       </div>
     )
   }

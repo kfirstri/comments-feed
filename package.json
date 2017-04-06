@@ -29,8 +29,11 @@
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
+    "babel-plugin-react-css-modules": "^2.6.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "style-loader": "^0.16.1",
     "webpack": "^2.3.1"
   }
 }

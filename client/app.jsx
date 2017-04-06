@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import {render} from 'react-dom'
 import Request from 'browser-request'
 
-import CommentsForm from './comments-form.jsx'
-import CommentsList from './comments-list.jsx'
+import CommentsForm from './CommentsForm.jsx'
+import CommentsList from './CommentsList.jsx'
 
 class App extends Component {
   constructor(props) {
@@ -64,8 +64,7 @@ class App extends Component {
     return (
       <div className="comments-container">
         <CommentsForm addComment={ this.addComment } />
-        <CommentsList comments={ this.state.comments } 
-                      loadingComments={ this.state.loadingComments }/>
+        <CommentsList { ...this.state } />
       </div>
     );
   }
